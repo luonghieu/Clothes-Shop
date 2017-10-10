@@ -1,11 +1,22 @@
 <?php 
+<<<<<<< HEAD
 namespace core;
+=======
+namespace App\Core;
+
+
+>>>>>>> CSHOP_DAI_USERS
 
 class Router
 {
 	protected $routes=[
+<<<<<<< HEAD
 	'GET'=>[],
 	'POST'=>[]
+=======
+		'GET'=>[],
+		'POST'=>[]
+>>>>>>> CSHOP_DAI_USERS
 	];
 
 	public static function load($file)
@@ -15,6 +26,14 @@ class Router
 		return $router;
 	}
 
+<<<<<<< HEAD
+=======
+	// public function define($routes)
+	// {
+	// 	$this->routes=$routes;
+	// }
+
+>>>>>>> CSHOP_DAI_USERS
 	public function get($uri,$controller)
 	{
 		$this->routes['GET'][$uri]=$controller;
@@ -27,6 +46,7 @@ class Router
 
 	public function direct($uri,$requestType)
 	{
+<<<<<<< HEAD
 		$params = [];
 		foreach( $this->routes[$requestType] as $url=>$controller ){
 			if( $url === '*' ){
@@ -71,15 +91,34 @@ class Router
 	protected function callAction($controller,$action,$params)
 	{
 		$controller="app\\controllers\\{$controller}";
+=======
+		if(array_key_exists($uri,$this->routes[$requestType]))
+		{
+
+			return $this->callAction(
+				...explode('@',$this->routes[$requestType][$uri])
+				);
+		}
+		throw new Exception('No route definded for this URI.');
+	}
+	protected function callAction($controller,$action)
+	{
+		$controller="App\\Controllers\\{$controller}";
+>>>>>>> CSHOP_DAI_USERS
 		$controller=new $controller;
 		if(!method_exists($controller,$action)){
 			throw new Exception(
 				"{$controller} dose not respond to the {$action} action."
 				);
+<<<<<<< HEAD
 		}else{
 			call_user_func_array([$controller,$action], $params);
 			return;
 		}
+=======
+		}
+		return $controller->$action();
+>>>>>>> CSHOP_DAI_USERS
 	}
 }
 ?>

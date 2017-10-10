@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 <?php
 namespace core\database; 
 use \PDO;
+=======
+<?php 
+>>>>>>> CSHOP_DAI_USERS
 class QueryBuilder
 {	
 	protected $pdo;
