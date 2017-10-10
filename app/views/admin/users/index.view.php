@@ -158,7 +158,7 @@ require dirname(__DIR__,1).'/require/header.view.php';
                                        <select id="level" name="level" class="multiselect" >
                                           <option <?php if($level==0) echo 'selected="selected"';?> value="0">--Level--</option>
                                           <option <?php if($level==1) echo 'selected="selected"';?> value="1">Admin</option>
-                                          <option <?php if($level==2) echo 'selected="selected"';?> value="2">Employees</option>
+                                          <option <?php if($level==2) echo 'selected="selected"';?> value="2">Employee</option>
                                           <option <?php if($level==3) echo 'selected="selected"';?> value="3">Customer</option>
                                       </select>
                                   </div>
