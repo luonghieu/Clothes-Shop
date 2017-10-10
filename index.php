@@ -1,5 +1,4 @@
 <?php
-<<<<<<< HEAD
 ob_start();
 require "core/Autoload.php";
 new core\Autoload;
@@ -12,15 +11,7 @@ use core\Request;
 Router::load('app/routes.php')->direct(Request::uri(),Request::method());
 
 ?>
-=======
-require 'vendor/autoload.php';
-$query=require 'core/bootstrap.php';
 
-use App\Core\Router;
-use App\Core\Request;
-
-Router::load('app/routes.php')->direct(Request::uri(),Request::method());
-?>
 
 
 

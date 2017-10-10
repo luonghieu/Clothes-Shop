@@ -115,165 +115,165 @@ require dirname(__DIR__).'/require/header.view.php';
                   <div class="col-xs-12">
                     <!-- PAGE CONTENT BEGINS -->
                     <form class="form-horizontal" role="form" action="/admin/users/search" method="post">
-                                            <?php
-                                            $username='';
-                                            $fullname='';
-                                            $active=-1;
-                                            $level=0;
-                                            if(isset($search_User))
-                                            {
-                                                $username=$search_User['username'];
-                                                $fullname=$search_User['fullname'];
-                                                $active=$search_User['active'];
-                                                $level=$search_User['level'];
-                                            }
-                                            ?>
-                                            <div class="row">
-                                              <div class="col-xs-3">
-                                                 <div class="form-group">
-                                                   <div class="pos-rel">
-                                                      <input class="typeahead scrollable" name="username" type="text" placeholder="Username" value="<?php echo $username; ?>" />
-                                                  </div>
-                                              </div>
-                                          </div>
-                                          <div class="col-xs-3">
-                                             <div class="form-group">
-                                               <div class="pos-rel">
-                                                  <input class="typeahead scrollable" name="fullname" type="text" value="<?php echo $fullname; ?>" placeholder="Fullname" />
-                                              </div>
-                                          </div>
-                                      </div>
-                                      <div class="col-xs-2">
-                                         <div class="form-group">
-                                           <select id="active" name="active" class="multiselect">
-                                              <option <?php if($active==-1) echo 'selected="selected"';?> value="-1">--Active--</option>
-                                              <option <?php if($active==1) echo 'selected="selected"';?> value="1">Active</option>
-                                              <option <?php if($active==0) echo 'selected="selected"';?> value="0">Non-Active</option>
-                                          </select>
-                                      </div>
-                                  </div>
-                                  <div class="col-sm-2">
-                                     <div class="form-group">
-                                       <select id="level" name="level" class="multiselect" >
-                                          <option <?php if($level==0) echo 'selected="selected"';?> value="0">--Level--</option>
-                                          <option <?php if($level==1) echo 'selected="selected"';?> value="1">Admin</option>
-                                          <option <?php if($level==2) echo 'selected="selected"';?> value="2">Employee</option>
-                                          <option <?php if($level==3) echo 'selected="selected"';?> value="3">Customer</option>
-                                      </select>
-                                  </div>
-                              </div>
-                              <div class="col-xs-2">
-                                <div class="form-group">
-                                    <button class="btn btn-success  fa fa-plus-square fa-lg" type="submit" name="search">Search</button>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                    <!-- PAGE CONTENT ENDS -->
-                </div><!-- /.col -->
-            </div>
-
-            <table id="simple-table" class="table  table-bordered table-hover">
-               <thead>
-                  <tr>
-                     <th class="text-center">
-                        Id
-                    </th>
-                    <th class="text-center">
-                        Image
-                    </th>
-                    <th class="text-center">
-                        Username
-                    </th>
-                    <th class="text-center">
-                        Fullname
-                    </th>
-                    <th class="text-center">
-                        Phone
-                    </th>
-                    <th class="text-center">
-                        Address
-                    </th>
-                    <th class="text-center">
-                        Level
-                    </th>
-                    <th class="text-center">
-                        Action
-                    </th>
-                </tr>
-            </thead>
-
-            <tbody>
-              <?php 
-              if(!empty($users))
-              {
-                foreach($users as $item){
-                 $id=$item->id;
-                 $username=$item->username;
-                 $fullname=$item->fullname;
-                 $phone=$item->phone;
-                 $address=$item->address;
-                 $level=$item->level;
-                 $avatar=$item->avatar;
-                 ?>
-                 <tr>
-                    <td class="text-center">
-                       <?php echo $id;?>
-                   </td>
-                   <td class="text-center">
-                       <img class="avatarintable" 
-                       src="/public/admin/upload/avatar/<?php
-                       if($avatar==''){
-                          echo "default.jpg";
-                      }else{
-                          echo $avatar;
+                      <?php
+                      $username='';
+                      $fullname='';
+                      $active=-1;
+                      $level=0;
+                      if(isset($search_User))
+                      {
+                        $username=$search_User['username'];
+                        $fullname=$search_User['fullname'];
+                        $active=$search_User['active'];
+                        $level=$search_User['level'];
                       }
-                      ?>" alt="">
-                  </td>
-                  <td class="text-center">
-                   <?php echo $username;?>
-               </td>
-               <td class="text-center">
-                   <?php echo $fullname;?>
-               </td>
-               <td class="text-center">
-                   <?php echo $phone;?>
-               </td>
+                      ?>
+                      <div class="row">
+                        <div class="col-xs-3">
+                         <div class="form-group">
+                           <div class="pos-rel">
+                            <input class="typeahead scrollable" name="username" type="text" placeholder="Username" value="<?php echo $username; ?>" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xs-3">
+                       <div class="form-group">
+                         <div class="pos-rel">
+                          <input class="typeahead scrollable" name="fullname" type="text" value="<?php echo $fullname; ?>" placeholder="Fullname" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-2">
+                     <div class="form-group">
+                       <select id="active" name="active" class="multiselect">
+                        <option <?php if($active==-1) echo 'selected="selected"';?> value="-1">--Active--</option>
+                        <option <?php if($active==1) echo 'selected="selected"';?> value="1">Active</option>
+                        <option <?php if($active==0) echo 'selected="selected"';?> value="0">Non-Active</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-sm-2">
+                   <div class="form-group">
+                     <select id="level" name="level" class="multiselect" >
+                      <option <?php if($level==0) echo 'selected="selected"';?> value="0">--Level--</option>
+                      <option <?php if($level==1) echo 'selected="selected"';?> value="1">Admin</option>
+                      <option <?php if($level==2) echo 'selected="selected"';?> value="2">Employee</option>
+                      <option <?php if($level==3) echo 'selected="selected"';?> value="3">Customer</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-xs-2">
+                  <div class="form-group">
+                    <button class="btn btn-success  fa fa-plus-square fa-lg" type="submit" name="search">Search</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+            <!-- PAGE CONTENT ENDS -->
+          </div><!-- /.col -->
+        </div>
 
-               <td class="text-center">
-                   <?php echo $address;?>
-               </td>
+        <table id="simple-table" class="table  table-bordered table-hover">
+         <thead>
+          <tr>
+           <th class="text-center">
+            Id
+          </th>
+          <th class="text-center">
+            Image
+          </th>
+          <th class="text-center">
+            Username
+          </th>
+          <th class="text-center">
+            Fullname
+          </th>
+          <th class="text-center">
+            Phone
+          </th>
+          <th class="text-center">
+            Address
+          </th>
+          <th class="text-center">
+            Level
+          </th>
+          <th class="text-center">
+            Action
+          </th>
+        </tr>
+      </thead>
 
-               <td class="text-center">
-                   <?php
-                   if($level==1){
-                      echo "admin";
-                  }else if($level==2){
-                      echo "employee";
-                  }else{
-                      echo "customer";
-                  }
-                  ?>
-              </td>
-              <td class="text-center">
-               <div class="hidden-sm hidden-xs btn-group">
-                <a class="btn btn-xs btn-info" href="/admin/users/edit?id=<?php echo $id; ?>">
-                    <i class="ace-icon fa fa-pencil bigger-120"></i>
-                </a>
-                <a class="btn btn-xs btn-danger" href="/admin/users/delete?id=<?php echo $id; ?>">
-                    <i class="ace-icon fa fa-trash-o bigger-120"></i>
-                </a>
-            </div>
+      <tbody>
+        <?php 
+        if(!empty($users))
+        {
+          foreach($users as $item){
+           $id=$item->id;
+           $username=$item->username;
+           $fullname=$item->fullname;
+           $phone=$item->phone;
+           $address=$item->address;
+           $level=$item->level;
+           $avatar=$item->avatar;
+           ?>
+           <tr>
+            <td class="text-center">
+             <?php echo $id;?>
+           </td>
+           <td class="text-center">
+             <img class="avatarintable" 
+             src="/public/admin/upload/avatar/<?php
+             if($avatar==''){
+              echo "default.jpg";
+            }else{
+              echo $avatar;
+            }
+            ?>" alt="">
+          </td>
+          <td class="text-center">
+           <?php echo $username;?>
+         </td>
+         <td class="text-center">
+           <?php echo $fullname;?>
+         </td>
+         <td class="text-center">
+           <?php echo $phone;?>
+         </td>
+
+         <td class="text-center">
+           <?php echo $address;?>
+         </td>
+
+         <td class="text-center">
+           <?php
+           if($level==1){
+            echo "admin";
+          }else if($level==2){
+            echo "employee";
+          }else{
+            echo "customer";
+          }
+          ?>
         </td>
-    
+        <td class="text-center">
+         <div class="hidden-sm hidden-xs btn-group">
+          <a class="btn btn-xs btn-info" href="/admin/users/edit?id=<?php echo $id; ?>">
+            <i class="ace-icon fa fa-pencil bigger-120"></i>
+          </a>
+          <a class="btn btn-xs btn-danger" href="/admin/users/delete?id=<?php echo $id; ?>">
+            <i class="ace-icon fa fa-trash-o bigger-120"></i>
+          </a>
+        </div>
+      </td>
+      
+      <?php
+    }
+  }else{
+    ?>
+    <td class="text-center" colspan="8">No data</td>
     <?php
-}
-}else{
+  }
   ?>
-  <td class="text-center" colspan="8">No data</td>
-<?php
-}
-?>
 </tr>
 </tbody>
 </table>
@@ -282,7 +282,7 @@ require dirname(__DIR__).'/require/header.view.php';
 
 <div class="row text-center">
   <?php 
-    echo $paginghtml;
+  echo $paginghtml;
   ?>
 </div>
 
@@ -295,5 +295,4 @@ require dirname(__DIR__).'/require/header.view.php';
 
 <?php 
 require dirname(__DIR__).'/require/footer.view.php';
-
 ?>

@@ -7,7 +7,6 @@ namespace Composer\Autoload;
 class ComposerStaticInitf02ea288be1306cc0237d39e679fa87b
 {
     public static $classMap = array (
-        'App\\Controllers\\UsersController' => __DIR__ . '/../..' . '/app/controllers/UsersController.php',
         'App\\Core\\App' => __DIR__ . '/../..' . '/core/App.php',
         'App\\Core\\Pagination' => __DIR__ . '/../..' . '/core/Pagination.php',
         'App\\Core\\Request' => __DIR__ . '/../..' . '/core/Request.php',
@@ -17,8 +16,13 @@ class ComposerStaticInitf02ea288be1306cc0237d39e679fa87b
         'ComposerAutoloaderInitf02ea288be1306cc0237d39e679fa87b' => __DIR__ . '/..' . '/composer/autoload_real.php',
         'Composer\\Autoload\\ClassLoader' => __DIR__ . '/..' . '/composer/ClassLoader.php',
         'Composer\\Autoload\\ComposerStaticInitf02ea288be1306cc0237d39e679fa87b' => __DIR__ . '/..' . '/composer/autoload_static.php',
-        'Connection' => __DIR__ . '/../..' . '/core/database/Connection.php',
-        'QueryBuilder' => __DIR__ . '/../..' . '/core/database/QueryBuilder.php',
+        'app\\controllers\\ErrorController' => __DIR__ . '/../..' . '/app/controllers/ErrorController.php',
+        'app\\controllers\\UsersController' => __DIR__ . '/../..' . '/app/controllers/UsersController.php',
+        'app\\models\\Users' => __DIR__ . '/../..' . '/app/models/Users.php',
+        'core\\App' => __DIR__ . '/../..' . '/core/App.php',
+        'core\\Autoload' => __DIR__ . '/../..' . '/core/Autoload.php',
+        'core\\database\\Connection' => __DIR__ . '/../..' . '/core/database/Connection.php',
+        'core\\database\\QueryBuilder' => __DIR__ . '/../..' . '/core/database/QueryBuilder.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
