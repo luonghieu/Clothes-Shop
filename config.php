@@ -1,8 +1,4 @@
 <?php
-<<<<<<< HEAD
-	
-=======
->>>>>>> CSHOP_DAI_USERS
 	return [
 		'database'=>[
 			'name' =>'shop',
