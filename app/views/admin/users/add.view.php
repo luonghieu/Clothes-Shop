@@ -1,6 +1,7 @@
 <?php 
 	require dirname(__DIR__,1).'/require/header.view.php';
 ?>
+
 		<div class="main-container ace-save-state" id="main-container">
 			<script type="text/javascript">
 				try{ace.settings.loadState('main-container')}catch(e){}
@@ -133,7 +134,6 @@
 										<div>
 									    	<select name="level" class="selectpicker">
 											  	<option value="2">Employee</option>
-											  	<option value="3">Customer</option>
 											</select>
 										</div>
 									</div>
