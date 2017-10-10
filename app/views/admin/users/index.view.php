@@ -1,13 +1,13 @@
 <?php
 
-require dirname(__DIR__,1).'/require/header.view.php';
+require dirname(__DIR__).'/require/header.view.php';
 ?>
 <div class="main-container ace-save-state" id="main-container">
   <script type="text/javascript">
     try{ace.settings.loadState('main-container')}catch(e){}
   </script>
   <?php 
-  require dirname(__DIR__,1).'/require/leftbar.view.php';
+  require dirname(__DIR__).'/require/leftbar.view.php';
   ?>
   <div class="main-content">
     <div class="main-content-inner">
@@ -299,5 +299,5 @@ require dirname(__DIR__,1).'/require/header.view.php';
 </div><!-- /.main-content -->
 
 <?php 
-require dirname(__DIR__,1).'/require/footer.view.php';
+require dirname(__DIR__).'/require/footer.view.php';
 ?>
