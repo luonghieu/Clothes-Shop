@@ -16,9 +16,9 @@ $(document).ready(function(){
       //remember me
 
         	$("#txtName").keyup(function(){
-         	var userName = ($('#txtName').val()).trim();
+            var userName = ($('#txtName').val()).trim();
 
-
+    
                  $.ajax({
                         url : '/admin/remember',
                         type : 'POST',
@@ -42,5 +42,5 @@ $(document).ready(function(){
                             alert(' Error : ' +errorType + ' with message ' + errorMessage);
                         }
             	});
-            });
-    });
+        });
+      });

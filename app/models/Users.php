@@ -82,6 +82,12 @@ class Users
 		return App::get('database')->query_fetch($query);
 	}
 
+	public static function checkLogin($username,$pass) {
+	   $query = "SELECT * FROM users WHERE active =1 AND username='".$username."' AND password ='".md5($pass)."'";
+               
+               return App::get('database')->query_fetch($query);
+	}
+
 // $stmt = $conn->prepare('INSERT INTO users (name, email, age) values (:name, :mail, :age)');
 
 // //Gán các biến (lúc này chưa mang giá trị) vào các placeholder theo tên của chúng
