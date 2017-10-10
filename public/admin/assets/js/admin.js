@@ -10,8 +10,9 @@ $(document).ready(function(){
                 success: function (data){
                 $(idstring).html(data);
               }
-            });
+         });
       });
+      
       //remember me
 
         	$("#txtName").keyup(function(){
@@ -41,5 +42,5 @@ $(document).ready(function(){
                             alert(' Error : ' +errorType + ' with message ' + errorMessage);
                         }
             	});
-                 });
+            });
     });
