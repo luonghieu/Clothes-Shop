@@ -1,11 +1,13 @@
 <?php 
 namespace core;
 
+
 class Router
 {
 	protected $routes=[
 	'GET'=>[],
 	'POST'=>[]
+
 	];
 
 	public static function load($file)
@@ -14,6 +16,7 @@ class Router
 		require $file;
 		return $router;
 	}
+
 
 	public function get($uri,$controller)
 	{
@@ -80,6 +83,7 @@ class Router
 			call_user_func_array([$controller,$action], $params);
 			return;
 		}
+
 	}
 }
 ?>

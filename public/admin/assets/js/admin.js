@@ -1,12 +1,24 @@
-
-        $(document).ready(function(){
-
-        	//remember me
+$(document).ready(function(){
+      //change active users
+      $(".edit_active").click(function (){        
+        var id=$(this).attr('id');
+        var idstring="#"+id;
+        $.ajax({
+                url:"/admin/users/active",
+                type:"GET",
+                data:{'id':id},
+                success: function (data){
+                $(idstring).html(data);
+              }
+         });
+      });
+      
+      //remember me
 
         	$("#txtName").keyup(function(){
-         	var userName = ($('#txtName').val()).trim();
+            var userName = ($('#txtName').val()).trim();
 
-
+    
                  $.ajax({
                         url : '/admin/remember',
                         type : 'POST',
@@ -30,5 +42,5 @@
                             alert(' Error : ' +errorType + ' with message ' + errorMessage);
                         }
             	});
-    });
         });
+      });

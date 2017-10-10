@@ -11,3 +11,28 @@ use core\Request;
 Router::load('app/routes.php')->direct(Request::uri(),Request::method());
 
 ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> CSHOP_DAI_USERS

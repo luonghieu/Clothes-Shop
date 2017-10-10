@@ -1,6 +1,18 @@
+<<<<<<< HEAD
+.avatar-index{
+	width:80px;
+	height: 80px;
+	border: 2px solid #cccccc;
+	border-radius:5px;
+}
+.avatar-edit{
+	width:150px;
+	height: 150px;
+=======
 .avatarintable{
 	width:80px;
 	height: 60px;
+>>>>>>> CSHOP_DAI_USERS
 	border: 2px solid #cccccc;
 	border-radius:5px;
 }

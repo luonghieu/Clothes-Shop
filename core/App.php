@@ -1,6 +1,7 @@
 <?php
 namespace core;
 
+
 class App 
 {
   protected static $registry = [];
@@ -19,3 +20,4 @@ class App
     return static::$registry[$key];
   }
 }
+

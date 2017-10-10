@@ -28,7 +28,6 @@
 				<i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
 			</a>
 		</div><!-- /.main-container -->
-
 		<script src="/public/admin/assets/js/jquery-2.1.4.min.js"></script>
 		<script src="/public/admin/assets/js/jquery-1.11.3.min.js"></script>
 		<script type="text/javascript">
@@ -46,7 +45,6 @@
 		<!-- ace scripts -->
 		<script src="/public/admin/assets/js/ace-elements.min.js"></script>
 		<script src="/public/admin/assets/js/ace.min.js"></script>
-
 		<script src="/public/admin/assets/js/admin.js"></script> 
 		<script src="/public/admin/assets/js/boostrap_ajax.js"></script>
 
@@ -55,10 +53,7 @@
 		<script src="/public/admin/assets/js/bootstrap-multiselect.min.js"></script>
 		<script src="/public/admin/assets/js/select2.min.js"></script>
 		<script src="/public/admin/assets/js/jquery-typeahead.js"></script>
-
-		
 		<script type="text/javascript">
-			
 		</script>
 	</body>
 </html>

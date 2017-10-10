@@ -1,13 +1,15 @@
 <?php 
-namespace app\models;
-use core\App;
 
+namespace App\Models;
+use App\Core\App;
+use App\Core\Pagination;
 class Users
 {
 
-	public static function all()
+	public static function all($current_page, $limit)
 	{
-		$query='select * from users';
+		$start = ($current_page - 1) * $limit;
+		$query='select * from users limit '.$start.', '.$limit;
 		return App::get('database')->query_fetch($query);
 	}
 
@@ -17,8 +19,12 @@ class Users
 		return App::get('database')->query_fetch($query);
 	}
 
-	public static function insert($new_User)
+	public static function count()
 	{
+		$query='select count(*) as total_record from users';
+		return App::get('database')->query_fetch($query);
+	}
+	public static function insert($new_User){
 		$username=$new_User['username'];
 		$password=$new_User['password'];
 		$fullname=$new_User['fullname'];
@@ -34,12 +40,14 @@ class Users
 	}
 
 	public static function deleteById($id)
+
 	{
 		$query="DELETE FROM users WHERE id={$id}";
 		return App::get('database')->query_excute($query);
 	}
 
 	public static function update($edit_User,$id)
+
 	{
 		$name=$edit_User['name'];
 		$phone=$edit_User['phone'];
@@ -85,5 +93,6 @@ class Users
 // //Gán các biến (lúc này chưa mang giá trị) vào các placeholder theo tên của chúng
 // $stmt->bindParam(':name', $name);
 	// $stmt->execute();
+
 }
 ?>

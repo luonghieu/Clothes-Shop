@@ -1,13 +1,13 @@
 <?php
 namespace core;
 
+
 class Session
 {
 	public static function createSession($msgKey,$message)
 	{
 		session_start();
 		$_SESSION[$msgKey]=$message;
-		
 	}
 
 	public static function getSession($msgKey)
