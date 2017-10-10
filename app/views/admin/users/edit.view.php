@@ -100,7 +100,7 @@
 						<div class="row">
 							<div class="col-md-10 col-md-offset-1">
 								<!-- PAGE CONTENT BEGINS -->
-							 	<form action="/admin/users/edit" method="post" enctype="multipart/form-data">
+							 	<form action="/admin/users/edit/<?php echo $user[0]->id; ?>" method="post" enctype="multipart/form-data">
 							 		<input type="hidden" value="<?php echo $user[0]->id; ?>" class="form-control" placeholder="Enter username" name="id">
 
 							    	<div class="form-group">

@@ -2,7 +2,6 @@
 ob_start();
 session_start();
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -18,9 +17,7 @@ session_start();
 		<link rel="stylesheet" href="/public/admin/assets/font-awesome/4.5.0/css/font-awesome.min.css" />
 
 		<!-- page specific plugin styles -->
-		<link rel="stylesheet" href="/public/admin/assets/css/bootstrap-duallistbox.min.css" />
-		<link rel="stylesheet" href="/public/admin/assets/css/bootstrap-multiselect.min.css" />
-		<link rel="stylesheet" href="/public/admin/assets/css/select2.min.css" />
+
 		<!-- text fonts -->
 		<link rel="stylesheet" href="/public/admin/assets/css/fonts.googleapis.com.css" />
 

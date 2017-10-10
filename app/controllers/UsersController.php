@@ -4,7 +4,6 @@ use app\Core\App;
 use app\Core\Session;
 use app\models\Users;
 
-
 class UsersController
 {
 	public function index()
@@ -65,9 +64,8 @@ class UsersController
 		return view('admin/users/edit',['user'=>$user]);
 	}
 
-	public function update()
+	public function update($id)
 	{	
-		$id=$_POST['id'];
 		$user=Users::find($id)[0];
 		
 		if(isset($_POST['submit'])){

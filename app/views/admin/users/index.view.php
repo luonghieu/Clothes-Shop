@@ -168,15 +168,7 @@
                             <?php echo $id;?>
                           </td>
                           <td class="text-center">
-                            <img class="avatar-index" src="/public/upload/avatar/
-                            <?php
-                              if($avatar==''){
-                                echo "default.png";
-                              }else{
-                                echo $avatar;
-                              }
-                            ?>
-                            " alt="">
+                            <img class="avatar-index" src="/public/upload/avatar/<?php if($avatar==''){echo "default.png";}else{echo $avatar;}?>" alt="">
                           </td>
                           <td class="text-center">
                             <?php echo $username;?>
