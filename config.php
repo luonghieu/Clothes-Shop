@@ -1,10 +1,10 @@
 <?php
 	return [
 		'database'=>[
-			'name' =>'shop',
-			'username'=>'root',
-			'password'=>'123456',
-			'connection'=>'mysql:host=127.0.0.1',
+			'name' =>'sql9199098',
+			'username'=>'sql9199098',
+			'password'=>'JdKs7yKrlp',
+			'connection'=>'sql9.freemysqlhosting.net',
 			'options'=>[
 				PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION
 			]
